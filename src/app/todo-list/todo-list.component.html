@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    <app-todo-item
+      *ngFor="let item of todosArray"
+      [todo]="item"
+      (deleteItemId)="deleteTodo($event)"
+    ></app-todo-item>
+  </ul>
+</div>

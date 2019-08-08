@@ -1,27 +1,10 @@
 <div>
   <div class="header">{{ title }}</div>
-  <div>
-    <ul>
-      <li *ngFor="let todo of todosArray; let i = index">
-        <div class="content" [ngClass]="{ completed: todo.status }">
-          <label>
-            <input [(ngModel)]="todo.status" type="checkbox" />
-            {{ todo.title }} -
-            {{ todo.text }}
-            <br />
-          </label>
-          <div>
-            <button class="delete_btn" (click)="deleteTodo(todo.text)">
-              Delete
-            </button>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="form">
+  <app-todo-list></app-todo-list>
+  <!-- <div class="form">
     <input [(ngModel)]="newTitle" type="text" placeholder="title" />
     <input [(ngModel)]="newText" type="text" placeholder="text" />
     <button class="add_btn" (click)="addTodo()">Add Todo</button>
-  </div>
+  </div> -->
+  <app-form></app-form>
 </div>

@@ -1,0 +1,15 @@
+<li (ondblclick)="edit()">
+  <div class="content" [ngClass]="{ completed: todo.status }">
+    <label>
+      <input [(ngModel)]="todo.status" type="checkbox" />
+      {{ todo.title }} -
+      {{ todo.text }}
+      <br />
+    </label>
+    <div>
+      <button class="delete_btn" (click)="delete(todo.id)">
+        Delete
+      </button>
+    </div>
+  </div>
+</li>
